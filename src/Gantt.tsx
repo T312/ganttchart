@@ -7,6 +7,8 @@ type prop = {
 
 const Gantt = ({ tasks }: prop) => {
   const [ganttContainer, setGanttContainer] = useState<any>();
+
+  
   useEffect(() => {
     gantt.config.columns = [
       { name: "text", label: "Task name", tree: true, width: 150 },
@@ -70,15 +72,15 @@ const Gantt = ({ tasks }: prop) => {
       ],
     };
 
-    // gantt.plugins({
-    //   tooltip: true,
-    // });
+    ganttContainer && gantt.plugins({
+      tooltip: true,
+    });
 
     gantt.init(ganttContainer);
     gantt.parse(tasks);
 
     
-  });
+  }, [ganttContainer]);
 
   return (
     <div
