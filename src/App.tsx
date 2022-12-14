@@ -1,8 +1,13 @@
 import React from "react";
 import "./App.css";
-
+import Gantt from "./Gantt";
+import dataLayout from "./data";
 function App() {
-  return <></>;
+  return (
+    <>
+      <Gantt tasks={dataLayout}></Gantt>
+    </>
+  );
 }
 
 export default App;
