@@ -1,17 +1,10 @@
 const dataLayout = {
   data: [
-    {
-      id: 1,
-      text: "Project qlda",
-      start_date: "01-09-2022",
-      duration: 18,
-      progress: 0.4,
-      open: true,
-    },
+    {id: 1, text: 'Task #1fyfygg', start_date: '10-12-2022', duration: 7, progress: 0.6},
+    {id: 2, text: 'Task #2', start_date: '12-12-2022', duration: 30, progress: 0.6}
   ],
   links: [
-    { id: 1, source: 1, target: 2, type: "1" },
-    { id: 2, source: 2, target: 3, type: "0" },
-  ],
+    {id: 1, source: 1, target: 2, type: '0'}
+  ]
 };
 export default dataLayout;

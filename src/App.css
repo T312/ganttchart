@@ -1,7 +1,7 @@
 html,
 body,
 #root,
-.gantt-container {
+.gantt_container {
   height: 500px;
 }
 .nested_task .gantt_add {
