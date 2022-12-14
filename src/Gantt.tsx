@@ -78,7 +78,7 @@ const Gantt = ({ tasks }: prop) => {
 
     gantt.init(ganttContainer);
     gantt.parse(tasks);
-  }, []);
+  }, [ganttContainer]);
 
   return (
     <div
