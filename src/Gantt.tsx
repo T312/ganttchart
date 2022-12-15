@@ -81,6 +81,9 @@ const Gantt = ({ tasks }: prop) => {
   }, [ganttContainer]);
 
   useLayoutEffect(() => {
+    gantt.clearAll();
+    // gantt.addTask(tasks)
+    // gantt.addTask
     gantt.parse(tasks);
   }, [tasks]);
 
