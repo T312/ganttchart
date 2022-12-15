@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import { gantt } from "dhtmlx-gantt";
 import "dhtmlx-gantt/codebase/skins/dhtmlxgantt_material.css";
 type prop = {
@@ -8,7 +8,7 @@ type prop = {
 const Gantt = ({ tasks }: prop) => {
   const [ganttContainer, setGanttContainer] = useState<any>();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     gantt.config.columns = [
       { name: "text", label: "Task name", tree: true, width: 150 },
       { name: "holder", label: "Holder", align: "center", width: 100 },
@@ -79,6 +79,10 @@ const Gantt = ({ tasks }: prop) => {
     gantt.init(ganttContainer);
     gantt.parse(tasks);
   }, [ganttContainer]);
+
+  useLayoutEffect(() => {
+    gantt.parse(tasks);
+  }, [tasks]);
 
   return (
     <div
